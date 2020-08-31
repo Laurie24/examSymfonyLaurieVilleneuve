@@ -1,0 +1,28 @@
+.title{
+    letter-spacing: 1rem;
+    color: white;
+    padding-top: 0;
+}
+
+p {
+    color: white;
+    font-size: small;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.btn{
+    color: white;
+    border: white solid 1px !important;
+    margin: 1rem;
+}
+
+.title{
+    letter-spacing: 1rem;
+    color: white;
+}
+.lien{
+    color: white !important;
+    text-decoration: none;
+}
+

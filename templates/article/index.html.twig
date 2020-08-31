@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActiviteController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Les articles</h1>
+        <div class="box">
+            <div class="row">
+                {% if app.user is not null%}
+                    <a class="btn padding" href="{{ path('add_article') }}">Ajouter un article</a>
+                {% endif %}
+            </div>
+        </div>
+
+
+        <div class="row">
+            {% for article in articles %}
+                <a href="{{ path('detail', {'id':article.id} ) }} ">
+                    <div class="card shadow" style="height: 25rem; width: 18rem; margin: 3rem" >
+                        <img src="/uploads/images/{{ article.image }}"  class="card-img-top">
+                        <div class="card-body">
+                            <h4>{{ article.titre }}</h4>
+                            <p class="card-text">Voir le détail de l'article</p>
+                            {% if app.user is not null%}
+                                <a class="btn" href="{{ path('article_delete', {'id':article.id}) }}">Supprimer</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

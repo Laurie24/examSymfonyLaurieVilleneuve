@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/default.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <div class="cover">
+        <div class="box">
+            <div class="row">
+                <div class="bottron">
+                    <h1 class="title">Le Progrès</h1>
+                    <div class="row">
+                        <a href="{{ path('article') }}" class="btn lien">Voir nos articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
